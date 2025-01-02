@@ -1,5 +1,6 @@
 from turtle import Screen
 from components.player import Player
+from components.monster import Monster
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -9,6 +10,7 @@ screen.tracer(0)
 
 # create components
 player = Player()
+monster = Monster()
 
 # set up key event
 screen.listen()
@@ -19,5 +21,7 @@ game_over = False
 
 while not game_over:
     screen.update()
+
+    monster.move_monsters()
 
 screen.exitonclick()
