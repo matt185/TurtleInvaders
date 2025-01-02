@@ -24,8 +24,7 @@ class Player(Turtle):
 
     def right(self):
         x = self.xcor()
-        x -= PLAYER_SPEED
+        x += PLAYER_SPEED
         if x > 280:
             x = 280
         self.setx(x)
-       
